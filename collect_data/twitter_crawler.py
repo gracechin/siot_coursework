@@ -4,10 +4,10 @@ import csv
 
 # Enter your keys/secrets as strings in the following fields
 credentials = {}
-credentials['CONSUMER_KEY'] = "HPo1fKvKHLBjfNgQMzAvWMmnU"
-credentials['CONSUMER_SECRET'] = "tXLfD3tGqf3QiGFhIu7GiPJ3w0gtZeaJdqNl815bxQVrcbD9y1"
-credentials['ACCESS_TOKEN'] = "75251127-mx4Ywt3edUQmmzhG44MinpirrCSA4BecA2H8PXOXb"
-credentials['ACCESS_SECRET'] = "dZGTs5oyCIU2Z2HEXX1sOwdQLlUjYqTfRO3jzgoYUKryU"
+credentials['CONSUMER_KEY'] =
+credentials['CONSUMER_SECRET'] =
+credentials['ACCESS_TOKEN'] =
+credentials['ACCESS_SECRET'] =
 
 # Filter out unwanted data
 def process_tweet(tweet):
@@ -52,5 +52,5 @@ class MyStreamer(TwythonStreamer):
 # Instantiate from our streaming class
 stream = MyStreamer(credentials['CONSUMER_KEY'], credentials['CONSUMER_SECRET'],
                     credentials['ACCESS_TOKEN'], credentials['ACCESS_SECRET'])
-# Start the stream
-stream.statuses.filter(track='air pollution', location='') # you can add locatin here for the ones related
+# Start the streamon', location='') # you can add locatin here for the ones related
+stream.statuses.filter(track='air polluti
