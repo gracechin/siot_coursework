@@ -20,6 +20,6 @@ def enter_pollution(row):
     index = 2
     pollution_sheet.insert_row(row, index)
 
-
-enter_twitter(["hello", "please", "work"])
-enter_pollution(["hello", "please", "work"])
+if __name__== "__main__":
+    enter_twitter(["hello", "please", "work"])
+    enter_pollution(["hello", "please", "work"])

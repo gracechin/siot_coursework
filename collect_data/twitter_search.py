@@ -3,16 +3,9 @@ import json
 from twython import Twython
 import pandas as pd
 
-# Enter your keys/secrets as strings in the following fields
-credentials = {}
-credentials['CONSUMER_KEY'] = "HPo1fKvKHLBjfNgQMzAvWMmnU"
-credentials['CONSUMER_SECRET'] = "tXLfD3tGqf3QiGFhIu7GiPJ3w0gtZeaJdqNl815bxQVrcbD9y1"
-credentials['ACCESS_TOKEN'] = "75251127-mx4Ywt3edUQmmzhG44MinpirrCSA4BecA2H8PXOXb"
-credentials['ACCESS_SECRET'] = "dZGTs5oyCIU2Z2HEXX1sOwdQLlUjYqTfRO3jzgoYUKryU"
-
-# # Load credentials from json file
-# with open("twitter_credentials.json", "r") as file:
-#     creds = json.load(file)
+# Load credentials from json file
+with open("twitter_credentials.json", "r") as file:
+    credentials = json.load(file)
 
 # Instantiate an object
 python_tweets = Twython(credentials['CONSUMER_KEY'], credentials['CONSUMER_SECRET'])

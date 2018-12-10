@@ -12,14 +12,29 @@ response = requests.request("GET", url_countries, params=querystring)
 print(response.text)
 print(len(response.json()["data"]))
 
-querystring = {"country":"USA","key":pollution_api_key}
-response = requests.request("GET", url_states, params=querystring)
+def find_states(country):
+    querystring = {"country":country,"key":pollution_api_key}
+    response = requests.request("GET", url_states, params=querystring)
+    list = []
+    print(response.json()["data"])
+    for dict in response.json()["data"]:
+        print(dict["state"])
+        list.append(dict["state"])
+    return(list)
 
-print(response.text)
-print(len(response.json()["data"]))
+def get_cities_list(criteria):
+    '''
+        List criteria [*country* <string>, *state* <string>]
+        returns list of lists of locations with specified city
+    '''
+    # get cities from api
+    querystring = {"state": criteria[0], "country": criteria[1], "key": pollution_api_key}
+    response = requests.request("GET", url_cities, params=querystring)
 
-querystring = {"state":"Hong Kong", "country":"Hong Kong", "key":pollution_api_key}
-response = requests.request("GET", url_cities, params=querystring)
+    # construct list
+    output_list = []
+    for dict in response.json()["data"]:
+        output_list.append([dict["city"], criteria[0], criteria[1]])
 
-print(response.text)
-print(len(response.json()["data"]))
+    return output_list
+

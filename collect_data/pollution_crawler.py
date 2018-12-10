@@ -1,5 +1,6 @@
 import requests
 import csv
+import time
 from google_sheet import enter_pollution
 pollution_api_key = "ahQ3grN738QipJk7A"
 
@@ -13,8 +14,10 @@ def get_pollution_data(location):
     # get pollution info from api
     querystring = {"city":location[0],"state":location[1],"country":location[2],"key":pollution_api_key}
     response = requests.request("GET", url_city, params=querystring)
+    print(response.json()['data'])
     data_p = response.json()['data']['current']['pollution']
     data = [data_p['ts'], data_p['aqicn'], data_p['aqius']]
+    time.sleep(10)
     return data
 
 def write_data(data, csv_name):
@@ -47,8 +50,12 @@ def get_cities_list(criteria):
 ### starting main code ###
 
 # list of locations
-location_list = [["Los Angeles", "California", "USA"],
-                 ["Hong Kong", "Hong Kong"]]
+location_list = [["London", "England","UK"], ["Birmingham", "England","UK"], ["Manchester", "England","UK"], ["Leeds", "England","UK"],
+                 ["Edinburgh", "Scotland","UK"], ["Glasgow", "Scotland","UK"], ["Swansea", "Wales","UK"], ["Plymouth", "England","UK"],
+                 ["Los Angeles", "California", "USA"], ["Beaumont", "Texas", "USA"], ["Orlando","Florida","USA"], ["Chicago","Illinois","USA"], ["Atlanta","Georgia","USA"],
+                 ["Hamamachi","Kyoto","Japan"], ["Chiyoda", "Tokyo","Japan"], ["Ao","Osaka", "Japan"],
+                 ["Delhi","Delhi","India"], ["New Delhi","Delhi","India"],
+                 ["Hong Kong","Hong Kong","Hong Kong"]]
 
 # loop through location
 for location in location_list:
@@ -75,5 +82,5 @@ for location in location_list:
         num = len(list)
         total_data = [','.join(location), data[0], total[0]/num, total[1]/num]
         # write_data(total_data, "_".join(location))
-        enter_pollution(data)
+        enter_pollution(total_data)
 
