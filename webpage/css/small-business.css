@@ -15,9 +15,36 @@ body {
 }
 
 .gif-format {
-	width: 100%
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
 
-.bg-setting {
+.pb-5, .py-5 {
+	padding-top: 3rem!important;
+	padding-bottom: 0rem!important;
+}
+
+.bg-setting, .bg-dark {
 	background-color: #faceff !important
+}
+
+.card-title,.card-text {
+	text-align: center;
+}
+
+.container {
+	position: relative;
+	height:100%
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }

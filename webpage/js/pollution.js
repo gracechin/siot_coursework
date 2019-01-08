@@ -1,10 +1,3 @@
-console.log(twitter_cred["CONSUMER_KEY"])
-
-consumer_key = twitter_cred["CONSUMER_KEY"]
-consumer_secret = twitter_cred["CONSUMER_SECRET"]
-access_token = twitter_cred["ACCESS_TOKEN"]
-access_secret = twitter_cred["ACCESS_SECRET"]
-
 city = "London"
 
 var settings = {
