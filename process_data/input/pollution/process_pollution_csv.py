@@ -119,7 +119,7 @@ class ProcessPollutionCSV:
 
 
 
-ProcessPollutionCSV("pollution_data")
+ProcessPollutionCSV("pollution_data_1")
 # read csv file
 
 # go through csv row-by-row

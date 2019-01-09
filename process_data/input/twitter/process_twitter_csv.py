@@ -96,7 +96,7 @@ class ProcessTwitterCSV:
                         last_dict = next_dict
                     writer.writerow(self.datetime_dicts[keys_list[i]])
 
-ProcessTwitterCSV("twitter_data")
+ProcessTwitterCSV("twitter_data_1")
 # read csv file
 
 # go through csv row-by-row
