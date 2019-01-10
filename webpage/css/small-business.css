@@ -4,10 +4,57 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-small-business/blob/master/LICENSE)
  */
 
+ .bg-setting, .bg-dark {
+	background-color: #faceff !important
+}
+ 
 body {
   padding-top: 54px;
 }
 
+.btn-secondary{
+	background-color:#eab0e6;
+	border-color:#6c757d00
+}
+
+.card-title,.card-text, h2 {
+	text-align: center;
+}
+
+.center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.container {
+	position: relative;
+	height:100%
+}
+
+h2, h5, .values, .card-text, p{
+	color: #c568ac;
+}
+
+.help {
+	background-color:#6c757d66;
+	border-color:#6c757d00
+}
+
+.logo {
+	width: 5%;
+}
+
+.row.no-gaps {
+	margin-top: 0%;
+}
+
+.row {
+	margin-top: 2%;
+}
+
+.values {
+    font-size: 500%;
+}
 @media (min-width: 992px) {
   body {
     padding-top: 56px;
@@ -23,23 +70,24 @@ body {
 	margin-bottom: 10px;
 }
 
+.gif-help {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 60%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+ .ml-auto{
+	 margin-right: auto!important;
+ }
+
 .pb-5, .py-5 {
 	padding-top: 3rem!important;
 	padding-bottom: 0rem!important;
 }
 
-.bg-setting, .bg-dark {
-	background-color: #faceff !important
-}
 
-.card-title,.card-text {
-	text-align: center;
-}
-
-.container {
-	position: relative;
-	height:100%
-}
 
 .vertical-center {
   margin: 0;

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SIOT coursework</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/small-business.css" rel="stylesheet">
+
+  </head>
+
+  <body class="bg-setting">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">Care Pollution</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!--<div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Help</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div> -->
+      </div>
+    </nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+		<div class="row">
+			<div class="center">
+			<p><b>select to see ..</b></p>
+			</div>
+		</div>
+		<div class="row no-gaps">
+			<div class="center">
+				<div class="btn-group" role="group" aria-label="Basic example">
+				  <button type="button" class="btn btn-secondary" id="London" onClick="reply_click(this.id)">London</button>
+				  <button type="button" class="btn btn-secondary" id="Manchester" onClick="reply_click(this.id)">Manchester</button>
+				  <button type="button" class="btn btn-secondary" id="Birmingham" onClick="reply_click(this.id)">Birmingham</button>
+				  <!--<button type="button" class="btn btn-secondary" id="Delhi" onClick="reply_click(this.id)">Delhi</button>
+				  <button type="button" class="btn btn-secondary" id="Mumbai" onClick="reply_click(this.id)">Mumbai</button>-->
+				</div>
+				<div class="btn-group" role="group" aria-label="Basic example">
+				  <button type="button" class="btn btn-secondary help" id="Help" onClick="show_help(this.id)">Help</button>
+				</div>
+			</div>
+		</div>
+      <!-- Content Row -->
+	  <div id = "help-hide">
+	  <div class="row">
+		<div class="col-md-4 mb-4">
+			<img id="aqi_lung" src="media/lung1.gif" class="gif-format">
+			<h5 class="card-title">what you are <i>exposed</i> to</h5>
+			<h2 class="card-title values" id="ldn_aqi"></h2>
+			<p class="card-text">POLLUTION INDEX</p>
+		</div>
+		<div class="col-md-4 mb-4">
+			<img id="care_lung" src="media/care1.gif" class="gif-format">
+			<h5 class="card-title">how much people <i>care</i></h5>
+			<h2 class="card-title values" id="ldn_care"></h2>
+            <p class="card-text">TWEETS PER HR <br>
+			ABOUT AIR POLLUTION</p>
+		</div>
+		<div class="col-md-4 mb-4">
+			<img id="potential_lung" src="media/lung1.gif" class="gif-format">
+			<h5 class="card-title">affects of <i>exposure</i> & <i>care</i></h5>
+		    <h2 class="card-title values" id="ldn_potential"></h2>
+		    <p class="card-text">AIR QUALITY INDEX <br></p>
+          </div>
+		</div>
+	  </div>
+      <!-- /.row -->
+	
+	<div id = "help">
+		<p class="card-text"><br><b>what you are <i>exposed</i> to</b> is represented by the POLLUTION INDEX</p>	
+	  <div class="row no-gaps">
+		<div class="col-md-2 mb-4">
+			<img id="aqi_lung" src="media/lung1.gif" class="gif-help">
+			<p class="card-text"><=50</p>
+		</div>
+		<div class="col-md-2 mb-4">
+			<img id="aqi_lung" src="media/lung2.gif" class="gif-help">
+			<p class="card-text">51-100</p>
+		</div>
+		<div class="col-md-2 mb-4">
+			<img id="aqi_lung" src="media/lung3.gif" class="gif-help">
+			<p class="card-text">101-150</p>
+		</div>
+		<div class="col-md-2 mb-4">
+			<img id="aqi_lung" src="media/lung4.gif" class="gif-help">
+			<p class="card-text">151-200</p>
+		</div>
+		<div class="col-md-2 mb-4">
+			<img id="aqi_lung" src="media/lung5.gif" class="gif-help">
+			<p class="card-text">201-300</p>
+		</div>
+		<div class="col-md-2 mb-4">
+			<img id="aqi_lung" src="media/lung6.gif" class="gif-help">
+			<p class="card-text">>300</p>
+		</div>
+	  </div>
+	  <p class="card-text"><b>how much people <i>care</i></b> is represented by TWEETS PER HOUR about air pollution</p>
+	  <div class="row no-gaps">
+		<div class="col-md-2 mb-4">
+			<img id="aqi_lung" src="media/care1.gif" class="gif-help">
+			<p class="card-text"><=20% of max</p>
+		</div>
+		<div class="col-md-2 mb-4">
+			<img id="aqi_lung" src="media/care2.gif" class="gif-help">
+			<p class="card-text">21-40% of max</p>
+		</div>
+		<div class="col-md-2 mb-4">
+			<img id="aqi_lung" src="media/care3.gif" class="gif-help">
+			<p class="card-text">41-60% of max</p>
+		</div>
+		<div class="col-md-2 mb-4">
+			<img id="aqi_lung" src="media/care4.gif" class="gif-help">
+			<p class="card-text">61-80% of max</p>
+		</div>
+		<div class="col-md-2 mb-4">
+			<img id="aqi_lung" src="media/care5.gif" class="gif-help">
+			<p class="card-text">81-100% of max</p>
+		</div>
+		<div class="col-md-2 mb-4">
+			<img id="aqi_lung" src="media/care6.gif" class="gif-help">
+			<p class="card-text">>100% of max <br> New max!</p>
+		</div>
+	  </div>
+	  <p class="card-text"><b>affects of <i>exposure</i> & <i>care</i></b> represents what the lung would look like taking into consideration <i>how much people care</i></p>
+	  
+	  </div>
+	 
+    </div>
+    <!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="js/pollution.js"></script>
+
+  </body>
+
+</html>
